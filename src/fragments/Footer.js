@@ -2,8 +2,10 @@ import React from 'react'
 
 export default function Footer() {
     return (
-        <div>
-            jalka
-        </div>
+        <footer className="footer">
+            <div className="container">
+                <span className="text-muted">Sanni R.</span>
+            </div>
+        </footer>
     )
 }
