@@ -1,18 +1,34 @@
 
 import './App.css';
 import {useEffect, useState} from 'react';
-import { Switch, Route } from 'react-router-dom';
+
+import NavBar from './fragments/NavBar';
+import Header from './fragments/Header';
+import Footer from './fragments/Footer';
 import Home from './Home';
 import About from './About';
-
+import ContactUs from './ContactUs';
+import NotFound from './NotFound';
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
 
   return (
-    <Switch>
-      <Route path="/" component={Home} exact/>
-      <Route path="/about" component={About} exact/>
-    </Switch>
+    <>
+    <NavBar />
+    <Header />
+    <div className="container">
+      <Switch>
+        <Route path="/" component={Home} exact />
+        <Route path="/about" component={About}/>
+        <Route path="/contactus" component={ContactUs}/>
+        <Route component={NotFound}/>
+      </Switch>
+      </div>
+    <Footer />
+
+    </>
+
   );
 
 
@@ -32,10 +48,10 @@ function App() {
 
 
 
-  // const [names, setNames] = useState([]);
+  {/* // const [names, setNames] = useState([]);
 
-  // useEffect(() => {
-  //   setNames(['Jouni', 'Pekka', 'Ilkka']);
+  // useEffect(() => { */}
+  {/* //   setNames(['Jouni', 'Pekka', 'Ilkka']);
   // }, [])
 
   // return (
@@ -47,12 +63,12 @@ function App() {
   //   // <div style={{padding: 50}}>
   //   //   <h3>Names</h3>
   //   //   <ol> 
-  //   //     {names.map(name => (
-  //   //       <li>{name}</li>
+  //   //     {names.map(name => ( */}
+  {/* //   //       <li>{name}</li>
   //   //     ))
 
   //   //     }
-  //   //   </ol>
+  //   //   </ol> */}
   //   // </div>
   // );
 
